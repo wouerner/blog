@@ -15,4 +15,5 @@ video explicando o proposito da serie.
 definir tema e até onde vai a serie.  
 definir texto video youtube    
 Blog no wordpress and hive.blog   
-link com github do projeto.
+link com github do projeto.  
+Separar musicas  
