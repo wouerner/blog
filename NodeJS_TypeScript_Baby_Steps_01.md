@@ -18,6 +18,11 @@ Clone the project
 git clone git@github.com:wouerner/nodejs-typescript.git
 ```
 ---
+go to:
+```
+cd nodejs-typescript
+```
+---
 Create a Dockerfile: 
 ```
 nvim Dockerfile
@@ -35,7 +40,7 @@ RUN npm install --verbose
 COPY . .
 
 EXPOSE 3000 
-CMD [ "npm", "run", "start-dev" ]
+# CMD [ "npm", "run", "start-dev" ]
 ```
 
 ---
@@ -49,11 +54,11 @@ Copy to file:
 version: '3'
 
 services:
-  nodejs-express:
+  app:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: nodejs-express
+    container_name: nodejs-typescript
     volumes:
       - ./:/app
       - /app/node_modules
@@ -62,11 +67,12 @@ services:
 
   db:
     image: 'mongo'
-    container_name: mongodb
+    container_name: typescript-mongodb
     ports:
       - '27017:27017'
     volumes:
       - /data/db
+
 ```
 
 ---
